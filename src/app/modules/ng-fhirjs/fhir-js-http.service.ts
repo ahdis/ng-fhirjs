@@ -136,4 +136,9 @@ export class FhirJsHttpService {
     return this.ifhirjs.prevPage(query);
   }
 
+  /** updates the config of this service */
+  public updateConfig(config: FhirConfig) {
+    this.ifhirjs = this.getService(this.httpClient, config);
+  }
+
 }
