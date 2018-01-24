@@ -22,8 +22,10 @@ export class FhirJsHttpService {
 
     function getHeader(headers: HttpHeaders): Map<string, string[]> {
       const map = new Map<string, string[]>();
-      for (const key of headers.keys()) {
-        map.set(key, headers.getAll(key));
+      if (headers && headers.keys()) {
+        for (const key of headers.keys()) {
+          map.set(key, headers.getAll(key));
+        }
       }
       return map;
     }
