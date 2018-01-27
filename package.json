@@ -2,16 +2,16 @@
   "name": "ng-fhirjs",
   "version": "0.1.1",
   "license": "MIT",
+  "author": "oliveregger",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod && ng-packagr -p ng-package.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "ng-packagr -p ng-package.json"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
