@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+   "whitelistedNonPeerDependencies": ["fhir.js"],
   "lib": {
     "entryFile": "./src/app/modules/ng-fhirjs/public_api.ts"
   }
+
 }

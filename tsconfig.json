@@ -1,15 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "baseUrl": ".",
-    "module": "commonjs",
     "paths": {
       "*": [
         "node_modules/*",
@@ -19,6 +19,6 @@
     "lib": [
       "es2017",
       "dom"
-    ]  
+    ]
   }
 }

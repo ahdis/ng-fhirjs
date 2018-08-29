@@ -20,7 +20,7 @@ npm pack
 ```
 new project:
 ```
-npm install ../ng-fhirjs/dist/ng-fhirjs-0.0.0.tgz
+npm install ../ng-fhirjs/dist/ng-fhirjs-0.2.0.tgz
 ```
 
 instead of using `import { FhirJsHttpService, FHIR_HTTP_CONFIG }  './modules/ng-fhirjs/fhir-js-http.service'` 
@@ -33,7 +33,7 @@ use now `import { FhirJsHttpService, FHIR_HTTP_CONFIG } from 'ng-fhirjs';`
 if a fork of fhir.js is used you can link to the fork version in the folling way.
 
 ```
-cd /somepath/fhir.js
+cd /somepath/fhir.js 
 npm link
     /usr/local/lib/node_modules/fhir.js -> /somepath/fhir.js
 cd /someotherpath/ng-fhirjs
