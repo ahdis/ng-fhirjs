@@ -11,7 +11,7 @@ interface IResource {
 }
 
 interface Auth { bearer?: string; user?: string; pass?: string }
-interface FhirConfig { baseUrl: string; auth?: Auth; credentials: string; headers?: Map<string, any> }
+interface FhirConfig { baseUrl: string; auth?: Auth; credentials: string; headers?: any }
 interface Minimal { debug?: boolean }
 interface RequestObj extends Minimal { method: "DELETE" | "GET" | "HEAD" | "JSONP" | "OPTIONS"; url: string, headers?: any, data?: any }
 interface ResponseObj { status: number; headers?: any; config: any; data: IResource }

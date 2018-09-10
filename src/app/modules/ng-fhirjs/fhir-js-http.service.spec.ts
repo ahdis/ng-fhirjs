@@ -5,7 +5,11 @@ import { FhirJsHttpService, FHIR_HTTP_CONFIG } from './fhir-js-http.service';
 
 export const FHIR_JS_CONFIG: FhirConfig = {
   baseUrl: 'http://localhost:8080/baseDstu3',
-  credentials: 'same-origin'
+  credentials: 'same-origin',
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'X-Another-Custom': 'Another Value',
+  }
 };
 
 describe('FhirJsHttpService', () => {
@@ -91,6 +95,8 @@ describe('FhirJsHttpService', () => {
       expect(req.request.method).toBe('GET');
       expect(req.request.headers.get('Accept')).toBe('application/json');
       expect(req.request.headers.get('Content-Type')).toBe('application/json');
+      expect(req.request.headers.get('Access-Control-Allow-Origin')).toBe('*');
+      expect(req.request.headers.get('X-Another-Custom')).toBe('Another Value');
       req.flush(resource);
     });
   });
