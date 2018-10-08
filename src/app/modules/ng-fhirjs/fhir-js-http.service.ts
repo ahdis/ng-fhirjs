@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Inject, InjectionToken } from '@angular/core';
 
-const fhirjs = require('fhir.js/src/fhir');
-
+const fhirjs = require('fhir.js/src/fhir.js');
 export interface FhirConfig { baseUrl: string; auth?: Auth; credentials: string; headers?: Map<string, any>; }
 
 export const FHIR_HTTP_CONFIG = new InjectionToken<FhirConfig>('fhir configuration');

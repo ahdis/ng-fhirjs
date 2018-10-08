@@ -2,6 +2,8 @@
 
 ng-fhirjs is an angular module for [fhir.js](https://github.com/FHIR/fhir.js). It uses HttpClient from @angular/common/http as a http adapter and provides a typescript interface to the fhir.js interface. The fhir-js-http service can be dynamically injected into your components. A testsuite has been added to verify the interface, however the interface covers not yet the complete functionality of the fhir.js implementation. Pull requests appreciated!
 
+ng-fhirjs now also integrates [fhirpath.js](https://github.com/lhncbc/fhirpath.js/)
+
 See [ng-fhir-sample](https://github.com/ahdis/ng-fhir-sample) for an example how to use it.
 
 ## usage

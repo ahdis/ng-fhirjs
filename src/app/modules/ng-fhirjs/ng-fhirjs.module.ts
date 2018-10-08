@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FHIR_HTTP_CONFIG, FhirJsHttpService } from './fhir-js-http.service';
+import { FhirPathService } from './fhirpath.service';
 
 @NgModule({
   imports: [
@@ -8,6 +9,6 @@ import { FHIR_HTTP_CONFIG, FhirJsHttpService } from './fhir-js-http.service';
   ],
   exports: [
   ],
-  providers: [FhirJsHttpService],
+  providers: [FhirJsHttpService, FhirPathService],
 })
 export class NgFhirjsModule { }
