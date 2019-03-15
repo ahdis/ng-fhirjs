@@ -34,5 +34,6 @@ module.exports = function(config) {
     },
     singleRun: false,
     restartOnFileChange: true,
+    webpack: { node: { fs: 'empty' } },
   });
 };
