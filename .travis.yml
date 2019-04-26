@@ -8,6 +8,8 @@ script:
 # keep the npm cache around to speed up installs
 cache:
   yarn: true
+before_deploy:
+  - cd dist/ng-fhirjs
 deploy:
   provider: npm
   email:
