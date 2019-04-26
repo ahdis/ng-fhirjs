@@ -1,10 +1,19 @@
 language: node_js
 node_js: '10'
-
 script:
   - yarn lint
   - yarn build
   - yarn test-ci
-# keep the npm cache around to speed up installs
 cache:
   yarn: true
+before_deploy:
+  - cd dist/ng-fhirjs
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: moritz.habegger@healthinal.com
+  api_key:
+    secure: UR8VaFr5IuSOXoLeyFvSgj25pqlCgMzL1t04tYBsCF94HmpFlK689+6/kI0K5yav7Y0af1iGOUFbOOm1fEnuZteneVpt6DKDFa3chr/qkzXPCIKB2JnmmNIdaCHAfxEuKozlosZa+zL4ylIDSXUl6IyQE9EnKxMiuLFuTti+Tcl/ve36k1ujVzHqta5jh88us8eyApeLRU6qSJOCPo8q/fVMCSaGdeNsVimN+VBr+dVmO47JtW2Gk56+C02p50tiSEYEEHkwmaj6RKOVZrYnQjvbnq2/jYDdbpieQDiLu84AaXVUk2zI6FtAKmino3yusFZEnNUQU9/OZh8JsW123xoQOAR41rJLbCgBwyXT9tZAGYEj5MwgsxYWnDnC6EMGVRsyQEX2obWeOgQ7randXVlDKhne+cz0FqtddpLBrm17sO9j7ybLfwc6QIOumt7rZ/eAMg6TIA3J7eEmPMfk8JtIqqejYxk4PHUUamn54nFi00TgGYCYvHXSJhbW0lXPc/+z+ETg/YHnHoXTPLVxX0DtZPAUJx2FfniabJhGQkaXJSijTEuVsfs6qxoBfKXyakfaHol7ld58iFivkUpP9Y3zTbzVvQFyFCBxRwh5nZGqDz5LOXxcRnP3uDAF1U4AvzDPJ0K5cp2U9irJqXMe+LiutLH+26Ps2cQ2rVdHft4=
+  on:
+    tags: true
+    branch: master
