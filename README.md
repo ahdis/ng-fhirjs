@@ -22,7 +22,7 @@ yarn build
 yarn pack --cwd dist/ng-fhirjs --filename ng-fhirjs.tgz
 ```
 
-New project (using [Yarn](https://yarnpkg.com/)):
+Add ng-fhirjs as dependency to a new project (using [Yarn](https://yarnpkg.com/)):
 
 ```
 yarn add file:../ng-fhirjs/dist/ng-fhirjs
@@ -53,9 +53,10 @@ npm link fhir.js
 
 ```
 yarn install
+yarn build
 ```
 
-## license
+## License
 
 MIT License
 
