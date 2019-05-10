@@ -57,6 +57,9 @@ yarn install
 yarn build
 ```
 
+## Contributing
+Have a look at [contributing](CONTRIBUTING.md).
+
 ## License
 
 MIT License
