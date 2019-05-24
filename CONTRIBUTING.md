@@ -8,7 +8,7 @@ git checkout master (can also be done via pull request)
 cd projects/ng-fhirjs
 yarn version
 # enter the new version for example 0.3.1
-git push
+git push && git push --tags
 ````
 
 This will update the `package.json` of the ng-fhirjs module and commit a git tag with the new version. 
