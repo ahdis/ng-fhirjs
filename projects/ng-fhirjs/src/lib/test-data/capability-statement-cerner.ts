@@ -132,7 +132,7 @@ export const createCapabilityStatementCernerResource = (): IResource => ({
                 'http://hl7.org/fhir/R4/SearchParameter/Resource-count',
               type: 'number',
               documentation:
-                'The maximum number of results to return. Not honored when  is set.',
+                "The maximum number of results to return. Not honored when '_id' is set.",
             },
             {
               name: 'patient',
@@ -189,20 +189,23 @@ export const createCapabilityStatementCernerResource = (): IResource => ({
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/Patient-identifier',
               type: 'token',
-              documentation: 'A patient identifier. ',
+              documentation:
+                "A patient identifier. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'name',
               definition: 'http://hl7.org/fhir/R4/SearchParameter/Patient-name',
               type: 'string',
-              documentation: 'The beginning of any name of the patient. ',
+              documentation:
+                "The beginning of any name of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'given',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-given',
               type: 'string',
-              documentation: 'The beginning of the given name of the patient.',
+              documentation:
+                "The beginning of the given name of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'family',
@@ -210,42 +213,47 @@ export const createCapabilityStatementCernerResource = (): IResource => ({
                 'http://hl7.org/fhir/R4/SearchParameter/individual-family',
               type: 'string',
               documentation:
-                'The beginning of the family name of the patient. ',
+                "The beginning of the family name of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'address-postalcode',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-address-postalcode',
               type: 'string',
-              documentation: 'The postal code of the address of the patient. ',
+              documentation:
+                "The postal code of the address of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'birthdate',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-birthdate',
               type: 'date',
-              documentation: 'The date of birth of the patient. ',
+              documentation:
+                "The date of birth of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'phone',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-phone',
               type: 'token',
-              documentation: 'The value of the phone number of the patient. ',
+              documentation:
+                "The value of the phone number of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'email',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-email',
               type: 'token',
-              documentation: 'The value of the email address of the patient. ',
+              documentation:
+                "The value of the email address of the patient. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'gender',
               definition:
                 'http://hl7.org/fhir/R4/SearchParameter/individual-gender',
               type: 'token',
-              documentation: 'The administrative gender of the patient. ',
+              documentation:
+                "The administrative gender of the patient. Gender may only be provided if another parameter other than '_id' is provided",
             },
             {
               name: '_count',
@@ -253,7 +261,7 @@ export const createCapabilityStatementCernerResource = (): IResource => ({
                 'http://hl7.org/fhir/R4/SearchParameter/Resource-count',
               type: 'number',
               documentation:
-                'The maximum number of results to return. Not honoured when',
+                "The maximum number of results to return. Not honoured when '_id' or 'identifier' are set.",
             },
           ],
         },

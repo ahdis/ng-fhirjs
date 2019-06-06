@@ -10,11 +10,11 @@ export class FhirPathService {
   }
 
   evaluateToString(fhir: any, fhirPath: string): string {
-    const result = this.evaluate(fhir, fhirPath);
+    let result = this.evaluate(fhir, fhirPath);
     if (
       result &&
       result instanceof Array &&
-      (result as Array<string>).length === 1
+      (result as Array<string>).length == 1
     ) {
       return (result as Array<string>)[0];
     }
