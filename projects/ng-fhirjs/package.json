@@ -1,11 +1,11 @@
 {
   "name": "ng-fhirjs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "author": "oliveregger",
   "dependencies": {
     "fhir.js": "0.0.20",
-    "fhirpath": "0.8.0"
+    "fhirpath": "0.16.0"
   },
   "peerDependencies": {
     "@angular/common": "^7.2.0",
