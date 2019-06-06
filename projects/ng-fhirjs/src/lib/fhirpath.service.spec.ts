@@ -61,7 +61,7 @@ describe('FhirPathService', () => {
       expect(
         service.evaluate(
           resource,
-          "rest.security.extension.where(url='http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris').extension.where(url='token').valueUri"
+          "rest.security.extension.where(url='http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris).extension.where(url='token').valueUri"
         )[0]
       ).toBe(
         'https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/token'
