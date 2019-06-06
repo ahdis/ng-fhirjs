@@ -181,7 +181,8 @@ export const createCapabilityStatementCernerResource = (): IResource => ({
               name: '_id',
               definition: 'http://hl7.org/fhir/R4/SearchParameter/Resource-id',
               type: 'token',
-              documentation: 'A single or comma separated list of Patient ids.',
+              documentation:
+                "A single or comma separated list of Patient ids. Either the '_id' parameter, or a combination of 'identifier', 'birthdate', 'name', 'given', 'family', 'address-postalcode', 'phone', or 'email' parameters must be provided.",
             },
             {
               name: 'identifier',
